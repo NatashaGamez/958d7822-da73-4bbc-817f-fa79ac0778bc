@@ -43,8 +43,10 @@ class Main(object):
                 goat += 1
             else:
                 car += 1
+        tot= goat+car
         table = {"Game-Resul":["Car","Goat"],
-                 "Count": [car,goat]}
+                 "Count": [car,goat],
+                 "Probability": [car/tot,goat/tot]}
         df = pd.DataFrame(table)
         print(df)
         if save:
